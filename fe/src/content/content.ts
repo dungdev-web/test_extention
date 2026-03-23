@@ -66,12 +66,11 @@ function scanImages(): ImageData[] {
   return results
 }
 
-// Safe wrapper: tránh crash khi extension bị reload
 function safeSendMessage(msg: object) {
   try {
     chrome.runtime.sendMessage(msg)
   } catch (e) {
-    // Extension context invalidated — dừng mọi hoạt động
+    // Extension context invalidated
     observer.disconnect()
   }
 }
@@ -84,7 +83,6 @@ function isExtensionAlive(): boolean {
   }
 }
 
-// Highlight
 let highlightOverlay: HTMLElement | null = null
 function highlightImage(src: string) {
   highlightOverlay?.remove()
@@ -121,7 +119,7 @@ function highlightImage(src: string) {
   setTimeout(() => overlay.remove(), 5500)
 }
 
-// MutationObserver — guard extension context trước khi gọi
+// MutationObserver — guard extension context
 let mutTimer: ReturnType<typeof setTimeout> | null = null
 const observer = new MutationObserver(() => {
   if (!isExtensionAlive()) { observer.disconnect(); return }
