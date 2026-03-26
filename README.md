@@ -9,19 +9,19 @@
 
 ---
 
-## ✨ Tính năng
+## Tính năng
 
-- 🖼️ Quét tất cả ảnh trên trang: `<img>`, CSS `background-image`, `<picture>`, SVG `<image>`
-- 📊 Hiển thị thumbnail, kích thước và URL ảnh dạng bảng (AG Grid)
-- 🔍 Tìm kiếm ảnh theo URL
-- 🔡 Lọc theo kích thước: **Nhỏ** / **Vừa** / **Lớn**
-- 🔢 Badge số lượng ảnh trên icon extension
-- ⚡ Tự động phát hiện ảnh mới bằng **MutationObserver**
-- 🤖 Xử lý AI trực tiếp trên trình duyệt với **TensorFlow.js** (không cần API key)
+- Quét tất cả ảnh trên trang: `<img>`, CSS `background-image`, `<picture>`, SVG `<image>`
+- Hiển thị thumbnail, kích thước và URL ảnh dạng bảng (AG Grid)
+- Tìm kiếm ảnh theo URL
+- Lọc theo kích thước: **Nhỏ** / **Vừa** / **Lớn**
+- Badge số lượng ảnh trên icon extension
+- Tự động phát hiện ảnh mới bằng **MutationObserver**
+- Xử lý AI trực tiếp trên trình duyệt với **TensorFlow.js** (không cần API key)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Công nghệ | Mục đích |
 |-----------|----------|
@@ -34,7 +34,7 @@
 
 ---
 
-## 📁 Cấu trúc project
+## Cấu trúc project
 
 ```
 src/
@@ -50,7 +50,7 @@ src/
 
 ---
 
-## 🚀 Cài đặt & Chạy
+## Cài đặt & Chạy
 
 ### 1. Clone repo
 
@@ -78,19 +78,10 @@ npm run watch
 3. Nhấn **Load unpacked**
 4. Chọn thư mục `dist/`
 
-> 💡 Mỗi lần sửa code, chờ terminal rebuild xong → nhấn **Reload** extension trong Chrome.
+> Mỗi lần sửa code, chờ terminal rebuild xong → nhấn **Reload** extension trong Chrome.
 
 ---
 
-## 📦 Build Production
-
-```bash
-npm run build
-```
-
-Output nằm trong thư mục `dist/`.
-
----
 
 ## 📄 License
 
