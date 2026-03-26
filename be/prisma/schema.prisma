@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Image {
+  id          Int      @id @default(autoincrement())
+  url         String   @db.Text
+  width       Int?
+  height      Int?
+  alt         String?  @db.VarChar(255)
+  srcType     String   @db.VarChar(50)
+  fileType    String?  @db.VarChar(20)
+  wpMediaId   Int?
+  wpMediaUrl  String?  @db.Text
+  status      String   @default("pending") @db.VarChar(20)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
